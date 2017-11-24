@@ -43,8 +43,8 @@ public class Functions {
 		String URL ="";
 		for (int i = 0; i < count; i++) {
 			if ((URL=ef[i].getWeburl()) != null) {
-				String domain = URL.replace("www.", "");
-				System.out.println("WebUrl : " + domain);
+				String domain = URL.replaceAll("^[w]*[0-9]*\\.", "");
+				System.out.println("WebUrl : " + domain.replaceAll("[\\/].*", ""));
 			}
 		}
 	}

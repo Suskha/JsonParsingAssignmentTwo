@@ -34,10 +34,10 @@ public class JsonParse {
 		//json.func.showCompanyKeyValue();
 		
 		//to show company with fax availabe with '-' removed
-		json.func.showFax();
+		//json.func.showFax();
 		
 		//to show compay domain name
-		//json.func.showWebUrl();
+		json.func.showWebUrl();
 	}
 	
 	public void readLineNumber() {
