@@ -17,7 +17,13 @@ public class Functions {
 	}
 
 	public void toWriteFile(BufferedWriter bd, Company d) throws IOException {
-		String completeUpdate = d.getCompany() + " : " + d.getDescription();
+		String companyDescription= null;
+		if (d.getDescription().isEmpty()) {
+			companyDescription = "no description available";
+		} else{
+			companyDescription = d.getDescription();
+		}
+		String completeUpdate = d.getCompany() + " : " + companyDescription;
 		bd.write(completeUpdate);
 		bd.newLine();
 	}
